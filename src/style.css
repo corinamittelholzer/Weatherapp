@@ -1,0 +1,123 @@
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  display: table-cell;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.thunderstorm {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(110, 112, 129) 0%,
+    rgb(41, 58, 75) 81.3%
+  );
+}
+
+.cloudy {
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.partiallycloudy {
+  background: linear-gradient(70deg, #8595bb 0%, #e4efe9 100%);
+}
+
+.rainy {
+  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+.sunny {
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+
+.sunandrain {
+  background: linear-gradient(
+    99.6deg,
+    rgb(112, 128, 152) 10.6%,
+    rgb(242, 227, 234) 32.9%,
+    rgb(234, 202, 213) 52.7%,
+    rgb(220, 227, 239) 72.8%,
+    rgb(185, 205, 227) 81.1%,
+    rgb(154, 180, 212) 102.4%
+  );
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.change-unit {
+  text-decoration: none;
+}
+
+.card.current .icon {
+  font-size: 80px;
+}
+
+.card.current .temperature {
+  font-size: 40px;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -30px;
+}
+
+.card.current .weather {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card.current .card-text {
+  font-size: 25px;
+}
+
+.card.current .info {
+  text-align: left;
+}
+.date {
+  font-size: 18px;
+}
+
+.temperature {
+  font-size: 18px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+footer {
+  background: white;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  border-radius: 0.25rem;
+}

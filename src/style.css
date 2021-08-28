@@ -86,6 +86,10 @@ h3 {
   border-color: rgb(182, 97, 97);
 }
 
+#weather-description::first-letter {
+  text-transform: capitalize;
+}
+
 .change-unit {
   text-decoration: none;
 }

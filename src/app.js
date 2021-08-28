@@ -76,6 +76,7 @@ function changeWeather(response) {
   changeDescription(response);
   changeWindspeed(response);
   changeHumidity(response);
+  //changeIcon(response);
 }
 
 function changeLocation(response) {
@@ -92,7 +93,7 @@ function changeTemperature(response) {
 }
 
 function changeDescription(response) {
-  let description = response.data.weather[0].main;
+  let description = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#weather-description");
   descriptionElement.innerHTML = `${description}`;
 }

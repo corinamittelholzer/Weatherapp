@@ -76,7 +76,15 @@ function changeWeather(response) {
   changeDescription(response);
   changeWindspeed(response);
   changeHumidity(response);
-  //changeIcon(response);
+  changeIcon(response);
+}
+
+function changeIcon(response) {
+  let iconElement = document.querySelector("#icon-now");
+  iconElement.setAttribute(
+    "src",
+    `images/${response.data.weather[0].icon}.svg`
+  );
 }
 
 function changeLocation(response) {

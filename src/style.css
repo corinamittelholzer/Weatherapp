@@ -86,7 +86,7 @@ h3 {
   border-color: rgb(182, 97, 97);
 }
 
-#weather-description::first-letter {
+#weather-description:first-letter {
   text-transform: capitalize;
 }
 
@@ -94,8 +94,8 @@ h3 {
   text-decoration: none;
 }
 
-.card.current .icon {
-  font-size: 80px;
+#icon-now {
+  width: 200px;
 }
 
 .card.current .temperature {

@@ -30,10 +30,17 @@
               class="form-control form-control-lg"
               placeholder="Enter city name"
               id="cityname-input"
+              autocomplete="off"
             />
           </div>
           <div class="col-3 d-grid">
-            <button type="submit" class="btn btn-danger btn-lg">Search</button>
+            <button
+              type="submit"
+              class="btn btn-danger btn-lg"
+              id="search-button"
+            >
+              Search
+            </button>
           </div>
           <div class="col-3 d-grid">
             <button
@@ -124,7 +131,14 @@
           </div>
         </div>
       </div>
-      <footer class="mt-3 mb-3 p-1">Coded by Corina Mittelholzer</footer>
+      <footer class="mt-3 mb-3 p-1">
+        <a
+          href="https://github.com/corinamittelholzer/Weatherapp"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Corina Mittelholzer
+      </footer>
     </div>
     <script src="src/app.js"></script>
   </body>

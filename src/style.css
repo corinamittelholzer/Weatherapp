@@ -68,6 +68,24 @@ h3 {
   font-size: 18px;
 }
 
+#current-button {
+  background-color: rgb(143, 188, 143);
+  border-color: rgb(143, 188, 143);
+}
+#current-button:hover {
+  background-color: rgb(105, 139, 105);
+  border-color: rgb(105, 139, 105);
+}
+
+#search-button {
+  background-color: rgb(240, 128, 128);
+  border-color: rgb(240, 128, 128);
+}
+#search-button:hover {
+  background-color: rgb(182, 97, 97);
+  border-color: rgb(182, 97, 97);
+}
+
 .change-unit {
   text-decoration: none;
 }
@@ -83,7 +101,7 @@ h3 {
 .units {
   font-size: 20px;
   position: relative;
-  top: -30px;
+  top: -25px;
 }
 
 .card.current .weather {
@@ -112,6 +130,10 @@ h3 {
 
 .icon {
   font-size: 40px;
+}
+
+a {
+  color: black;
 }
 
 footer {

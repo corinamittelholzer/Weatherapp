@@ -59,9 +59,11 @@ body {
 h1 {
   font-size: 40px;
   font-weight: bold;
+  color: black;
 }
 h2 {
   font-size: 30px;
+  color: dimgrey;
 }
 
 h3 {
@@ -86,26 +88,37 @@ h3 {
   border-color: rgb(182, 97, 97);
 }
 
+.card-body {
+  color: dimgrey;
+}
+#weather-description {
+  color: black;
+}
+
 #weather-description:first-letter {
   text-transform: capitalize;
 }
 
 .change-unit {
   text-decoration: none;
+  color: rgb(240, 128, 128);
 }
 
 #icon-now {
   width: 200px;
 }
 
-.card.current .temperature {
+#temperature-now {
+  color: rgb(240, 128, 128);
   font-size: 40px;
+  font-weight: bold;
 }
 
 .units {
   font-size: 20px;
   position: relative;
   top: -25px;
+  color: dimgrey;
 }
 
 .card.current .weather {
@@ -137,13 +150,13 @@ h3 {
 }
 
 a {
-  color: black;
+  color: dimgrey;
 }
 
 footer {
   background: white;
   font-size: 15px;
   text-align: center;
-  color: black;
+  color: dimgrey;
   border-radius: 0.25rem;
 }

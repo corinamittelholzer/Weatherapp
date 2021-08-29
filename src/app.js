@@ -79,14 +79,6 @@ function changeWeather(response) {
   changeIcon(response);
 }
 
-function changeIcon(response) {
-  let iconElement = document.querySelector("#icon-now");
-  iconElement.setAttribute(
-    "src",
-    `images/${response.data.weather[0].icon}.svg`
-  );
-}
-
 function changeLocation(response) {
   let cityName = response.data.name;
   let h1 = document.querySelector("h1");
@@ -116,6 +108,14 @@ function changeHumidity(response) {
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `Humidity: ${Math.round(humidity)}%`;
+}
+
+function changeIcon(response) {
+  let iconElement = document.querySelector("#icon-now");
+  iconElement.setAttribute(
+    "src",
+    `images/${response.data.weather[0].icon}.svg`
+  );
 }
 
 let searchForm = document.querySelector("#search-form");

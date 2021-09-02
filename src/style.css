@@ -15,36 +15,52 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.thunderstorm {
+/* Thunderstorm */
+.background11d {
   background: radial-gradient(
     circle at 10% 20%,
     rgb(110, 112, 129) 0%,
     rgb(41, 58, 75) 81.3%
   );
 }
+/* broken clouds */
+.background04d {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
 
-.cloudy {
+/* snow */
+.background13d {
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
-.partiallycloudy {
-  background: linear-gradient(70deg, #8595bb 0%, #e4efe9 100%);
+/* nebel */
+.background50d {
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+/* scattered clouds, bisschen bewölkt*/
+.background03d {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
 }
 
-.rainy {
+/* few clouds, Sonne und Wolken*/
+.background02d {
+  background: linear-gradient(70deg, #8595bb 0%, #e4efe9 100%);
+}
+/* shower rain, rain*/
+.background09d {
   background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
 }
 
-.sunny {
+/* sunny */
+.background01d {
   background: radial-gradient(
     592px at 48.2% 50%,
     rgba(255, 255, 249, 0.6) 0%,
     rgb(160, 199, 254) 74.6%
   );
 }
-
-.sunandrain {
+/* sun and rain */
+.background10d {
   background: linear-gradient(
     99.6deg,
     rgb(112, 128, 152) 10.6%,
@@ -54,6 +70,19 @@ body {
     rgb(185, 205, 227) 81.1%,
     rgb(154, 180, 212) 102.4%
   );
+}
+
+/* night */
+.background01n,
+.background02n,
+.background03n,
+.background04n,
+.background09n,
+.background10n,
+.background50n,
+.background11n,
+.background13n {
+  background: linear-gradient(to right, #232526, #414345);
 }
 
 h1 {

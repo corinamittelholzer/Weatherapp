@@ -59,14 +59,17 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let cityTemperature;
 
-function getWeatherByCityName(event) {
-  event.preventDefault();
-  let cityName = document.querySelector("#cityname-input").value;
-
+function search(cityName) {
   let apiKey = "833c266388856a77756df0737bbad0be";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric`;
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(changeWeather);
+}
+
+function getWeatherByCityName(event) {
+  event.preventDefault();
+  let cityName = document.querySelector("#cityname-input").value;
+  search(cityName);
 }
 
 function changeWeather(response) {
@@ -125,6 +128,8 @@ function toFahrenheit(event) {
   event.preventDefault();
   let temperatureNow = document.querySelector("#temperature-now");
   temperatureNow.innerHTML = `${Math.round((cityTemperature * 9) / 5 + 32)}`;
+  changeToC.classList.remove("active");
+  changeToF.classList.add("active");
 }
 
 let changeToF = document.querySelector("#change-to-f");
@@ -134,7 +139,11 @@ function toCelsius(event) {
   event.preventDefault();
   let temperatureNow = document.querySelector("#temperature-now");
   temperatureNow.innerHTML = `${cityTemperature}`;
+  changeToF.classList.remove("active");
+  changeToC.classList.add("active");
 }
 
 let changeToC = document.querySelector("#change-to-c");
 changeToC.addEventListener("click", toCelsius);
+
+search("Zürich");

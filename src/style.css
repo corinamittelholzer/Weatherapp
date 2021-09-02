@@ -101,7 +101,13 @@ h3 {
 
 .change-unit {
   text-decoration: none;
+  color: dimgrey;
+}
+
+.change-unit.active {
   color: black;
+  font-weight: bold;
+  cursor: default;
 }
 
 #icon-now {

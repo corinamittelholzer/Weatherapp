@@ -80,6 +80,7 @@ function changeWeather(response) {
   changeWindspeed(response);
   changeHumidity(response);
   changeIcon(response);
+  changeBackground(response);
 }
 
 function changeLocation(response) {
@@ -119,6 +120,13 @@ function changeIcon(response) {
     "src",
     `images/${response.data.weather[0].icon}.svg`
   );
+}
+
+function changeBackground(response) {
+  let body = document.querySelector("body");
+  body.setAttribute("class", `background${response.data.weather[0].icon}`);
+  //body.classList.remove(body.classList.item(0));
+  //body.classList.add(`background${response.data.weather[0].icon}`);
 }
 
 let searchForm = document.querySelector("#search-form");

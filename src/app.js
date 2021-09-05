@@ -1,46 +1,4 @@
-new Date();
-
-let currentDate = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[currentDate.getDay()];
-let date = currentDate.getDate();
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "June",
-  "July",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[currentDate.getMonth()];
-
-let h2 = document.querySelector("h2");
-h2.innerHTML = `${day}, ${month} ${date}`;
-
-let hour = currentDate.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
-}
-let minute = currentDate.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
-}
-let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = `${hour}:${minute}`;
+//new Date();
 
 function getWeatherByCurrentLocation(position) {
   let apiKey = "833c266388856a77756df0737bbad0be";
@@ -73,7 +31,8 @@ function getWeatherByCityName(event) {
 }
 
 function changeWeather(response) {
-  //console.log(response.data);
+  // console.log(response.data);
+  changeDate(response);
   changeLocation(response);
   changeTemperature(response);
   changeDescription(response);
@@ -81,6 +40,50 @@ function changeWeather(response) {
   changeHumidity(response);
   changeIcon(response);
   changeBackground(response);
+}
+
+function changeDate(response) {
+  let currentDate = new Date(response.data.dt * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[currentDate.getDay()];
+  let date = currentDate.getDate();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[currentDate.getMonth()];
+
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = `${day}, ${month} ${date}`;
+
+  let hour = currentDate.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = currentDate.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  let currentTime = document.querySelector("#current-time");
+  currentTime.innerHTML = `updated at ${hour}:${minute}`;
 }
 
 function changeLocation(response) {

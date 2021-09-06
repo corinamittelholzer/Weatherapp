@@ -40,6 +40,7 @@ function changeWeather(response) {
   changeHumidity(response);
   changeIcon(response);
   changeBackground(response);
+  displayForecast();
 }
 
 function changeDate(response) {
@@ -158,3 +159,23 @@ let changeToC = document.querySelector("#change-to-c");
 changeToC.addEventListener("click", toCelsius);
 
 search("Zürich");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="card">
+            <div class="card-body">
+            <h3 class="day">${day}</h3>
+            <p class="date">26/07</p>
+            <img class="icon" src="images/03d.svg" />
+            <p class="temperature-max">25°  <span class="temperature-min">18°<span> </p>
+          </div> </div>`;
+  });
+
+  //  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}

@@ -119,6 +119,7 @@ h3 {
 
 .card-body {
   color: dimgrey;
+  text-align: center;
 }
 #weather-description {
   color: black;
@@ -173,14 +174,14 @@ h3 {
 .date {
   font-size: 18px;
 }
-
-.temperature {
+.temperature-max {
   font-size: 18px;
   margin-bottom: 0;
 }
-
-.card-body {
-  text-align: center;
+.temperature-min {
+  font-size: 18px;
+  margin-bottom: 0;
+  opacity: 0.7;
 }
 
 .icon {

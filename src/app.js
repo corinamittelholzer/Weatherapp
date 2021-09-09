@@ -31,7 +31,7 @@ function getWeatherByCityName(event) {
 }
 
 function changeWeather(response) {
-  // console.log(response.data);
+  //console.log(response.data);
   changeDate(response);
   changeLocation(response);
   changeTemperature(response);
@@ -40,7 +40,7 @@ function changeWeather(response) {
   changeHumidity(response);
   changeIcon(response);
   changeBackground(response);
-  displayForecast();
+  getForecast(response);
 }
 
 function changeDate(response) {
@@ -160,20 +160,45 @@ changeToC.addEventListener("click", toCelsius);
 
 search("Zürich");
 
-function displayForecast() {
+function getForecast(response) {
+  let apiKey = "833c266388856a77756df0737bbad0be";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  return `${day}/${month}`;
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="card">
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="card">
             <div class="card-body">
-            <h3 class="day">${day}</h3>
-            <p class="date">26/07</p>
-            <img class="icon" src="images/03d.svg" />
-            <p class="temperature-max">25°  <span class="temperature-min">18°<span> </p>
+            <h3 class="day">${formatDay(forecastDay.dt)}</h3>
+            <p class="date">${formatDate(forecastDay.dt)}</p>
+            <img class="icon" src="images/${forecastDay.weather[0].icon}.svg" />
+            <p class="temperature-max">${Math.round(
+              forecastDay.temp.max
+            )}° <span class="temperature-min">${Math.round(
+          forecastDay.temp.min
+        )}°<span> </p>
           </div> </div>`;
+    }
   });
 
   //  forecastHTML = forecastHTML + `</div>`;

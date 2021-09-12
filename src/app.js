@@ -98,6 +98,8 @@ function changeTemperature(response) {
   let temperatureElement = document.querySelector("#temperature-now");
   temperatureElement.innerHTML = `${temperature}`;
   cityTemperature = temperature;
+  changeToF.classList.remove("active");
+  changeToC.classList.add("active");
 }
 
 function changeDescription(response) {

@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* Thunderstorm */
 .background11d {
   background: radial-gradient(
@@ -23,6 +24,7 @@ body {
     rgb(41, 58, 75) 81.3%
   );
 }
+
 /* broken clouds */
 .background04d {
   background: linear-gradient(to right, #bdc3c7, #2c3e50);
@@ -37,6 +39,7 @@ body {
 .background50d {
   background: linear-gradient(to right, #eef2f3, #8e9eab);
 }
+
 /* scattered clouds, bisschen bewölkt*/
 .background03d {
   background: linear-gradient(to right, #c9d6ff, #e2e2e2);
@@ -46,6 +49,7 @@ body {
 .background02d {
   background: linear-gradient(70deg, #8595bb 0%, #e4efe9 100%);
 }
+
 /* shower rain, rain*/
 .background09d {
   background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
@@ -59,6 +63,7 @@ body {
     rgb(160, 199, 254) 74.6%
   );
 }
+
 /* sun and rain */
 .background10d {
   background: linear-gradient(
@@ -90,6 +95,7 @@ h1 {
   font-weight: bold;
   color: black;
 }
+
 h2 {
   font-size: 30px;
   color: dimgrey;
@@ -103,6 +109,7 @@ h3 {
   background-color: rgb(143, 188, 143);
   border-color: rgb(143, 188, 143);
 }
+
 #current-button:hover {
   background-color: rgb(105, 139, 105);
   border-color: rgb(105, 139, 105);
@@ -112,6 +119,7 @@ h3 {
   background-color: rgb(240, 128, 128);
   border-color: rgb(240, 128, 128);
 }
+
 #search-button:hover {
   background-color: rgb(182, 97, 97);
   border-color: rgb(182, 97, 97);
@@ -121,6 +129,7 @@ h3 {
   color: dimgrey;
   text-align: center;
 }
+
 #weather-description {
   color: black;
 }
@@ -171,16 +180,17 @@ h3 {
 .card.current .info {
   text-align: left;
 }
+
 .date {
   font-size: 18px;
 }
-.temperature-max {
+
+.temperature-forecast {
   font-size: 18px;
   margin-bottom: 0;
 }
+
 .temperature-min {
-  font-size: 18px;
-  margin-bottom: 0;
   opacity: 0.7;
 }
 
